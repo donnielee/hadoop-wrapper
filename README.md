@@ -85,19 +85,16 @@ default['hadoop']['hdfs_site']['dfs.journalnode.edits.dir'] = '/usr/lib/hadoop-j
 
 e.g.
 예를 들어, 특정 서버에 namenode, zookeeper, nfs를 설치하려면
+hosts cookbook을 설치하여, hadoop cluster 서버들의 hostname 및 IP Address를 cluster 서버들의 /etc/hosts에 저장하고,
+zookeeper를 설치하여, namenode와 함께 설치되는 zkfc(zookeeper failover controller)가 연동될 수 있도록 한다.
+그리고 나서, ative 및 standby namenode가 metadata 변경사항을 기록할 nfs 서버 또는 journal manager를 설치하고,
+hadoop namenode ha active를 설치한 후 standby를 설치한다.
 
+이외에, data node, node manager, resource manager도 cluster의 환경에 맞게 설치할 수 있도록 한다.
 
 
 ## Contributing
 
-
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
 
 ## License and Authors
 
