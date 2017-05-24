@@ -52,7 +52,7 @@ default['hadoop']['hdfs_site']['dfs.namenode.http-address.gpu-cluster.namenode17
 
 default['hadoop']['hdfs_site']['dfs.client.failover.proxy.provider.gpu-cluster'] = 'org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider'
 default['hadoop']['hdfs_site']['dfs.namenode.shared.edits.dir'] = 'file:///mnt/nfsshare'
-# sshfence([[username][:port]])
+
 default['hadoop']['hdfs_site']['dfs.ha.fencing.methods'] = 'sshfence'
 default['hadoop']['hdfs_site']['dfs.ha.fencing.ssh.private-key-files'] = '/home/hdfs/.ssh/id_rsa'
 
