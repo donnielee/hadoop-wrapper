@@ -1,0 +1,6 @@
+DEPENDENCIES
+  selinux (> 1.0.0)
+
+GRAPH
+  selinux (1.0.4)
+  ulimit (0.5.0)
